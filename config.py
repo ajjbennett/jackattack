@@ -1,3 +1,10 @@
+# Andrew Bennett
+# config.py
+# June 2016
+# contains color codes and level config for jack attack
+# version
+# 1.0 28 july 2016 contains first 30 levels config
+#
 C_COLOR_BLACK=(0,0,0)
 C_COLOR_WHITE=(255,255,255)
 C_COLOR_RED=(255,0,0)
@@ -20,8 +27,10 @@ C_COLOR_INDIGO=(49, 30, 156)
 C_COLOR_SNATA_FE=(179,107,87)
 C_COLOR_SADDLE_BROWN=(130,79,17)
 C_COLOR_CRAB_APPLE=(126,54,40)
-
-#C_COLOR_INDIGO2=(49,30,156)
+C_COLOR_SUSHI=(119,186,51)
+C_COLOR_RIPTIDE=(136,215,201)
+C_COLOR_DEEP_LILAC=(142,72,194)
+C_COLOR_TIA_MARIA=(149,64,43)
 
 C_COLOR_ENEMY_BLOOD=(57,255,20)
 
@@ -101,7 +110,8 @@ levelconfig={
         'brick_color':C_COLOR_INDIGO,
         'brick_border_color':C_COLOR_SNOT_GREEN,
         'ledge_color':C_COLOR_VLBLUE,
-        'ledge_touched_color':C_COLOR_PURPLE
+        'ledge_touched_color':C_COLOR_PURPLE,
+        'ledge_platform_bonus':2000
         },
    '7':{
         'level_name':'Puzzle I', 
@@ -113,7 +123,8 @@ levelconfig={
         'brick_color':C_COLOR_SNATA_FE,
         'brick_border_color':C_COLOR_CREAMY_BLUE,
         'ledge_color':C_COLOR_WHITE,
-        'ledge_touched_color':C_COLOR_BLUE
+        'ledge_touched_color':C_COLOR_BLUE,
+        'ledge_platform_bonus':2000
         },
    '8':{
         'level_name':'Goalpost', 
@@ -125,7 +136,8 @@ levelconfig={
         'brick_color':C_COLOR_WHITE,
         'brick_border_color':C_COLOR_SNOT_GREEN,
         'ledge_color':C_COLOR_WHITE,
-        'ledge_touched_color':C_COLOR_BLUE
+        'ledge_touched_color':C_COLOR_BLUE,
+        'ledge_platform_bonus':2000
         },
    '9':{
         'level_name':'Sidebars', 
@@ -135,7 +147,8 @@ levelconfig={
         'ground_tiles_color':C_COLOR_BLUE,
         'ground_tiles_etched_color':C_COLOR_BLACK,
         'brick_color':C_COLOR_SADDLE_BROWN,
-        'brick_border_color':C_COLOR_INDIGO
+        'brick_border_color':C_COLOR_INDIGO,
+        'ledge_platform_bonus':2000
         },
    '10':{
         'level_name':'Pyramid I', 
@@ -155,7 +168,8 @@ levelconfig={
         'ground_tiles_color':C_COLOR_BLUE,
         'ground_tiles_etched_color':C_COLOR_BLACK,
         'brick_color':C_COLOR_INDIGO,
-        'brick_border_color':C_COLOR_SNOT_GREEN
+        'brick_border_color':C_COLOR_SNOT_GREEN,
+        'ledge_platform_bonus':2000
         },
    '12':{
         'level_name':'Hard Climb', 
@@ -165,7 +179,8 @@ levelconfig={
         'ground_tiles_color':C_COLOR_BLUE,
         'ground_tiles_etched_color':C_COLOR_BLACK,
         'brick_color':C_COLOR_SNOT_GREEN,
-        'brick_border_color':C_COLOR_INDIGO
+        'brick_border_color':C_COLOR_INDIGO,
+        'ledge_platform_bonus':3000
         },
    '13':{
         'level_name':'Hidden Horsie', 
@@ -196,7 +211,8 @@ levelconfig={
         'ground_tiles_etched_color':C_COLOR_BLACK,
         'brick_color':C_COLOR_SNOT_GREEN,
         'brick_border_color':C_COLOR_CRAB_APPLE,
-        'ledge_delay_speed':3
+        'ledge_delay_speed':3,
+        'ledge_platform_bonus':5000
         },
    '16':{
         'level_name':'Platform Puzzle II', 
@@ -207,7 +223,8 @@ levelconfig={
         'ground_tiles_etched_color':C_COLOR_BLACK,
         'brick_color':C_COLOR_BLACK,
         'brick_border_color':C_COLOR_YELLOW,
-        'ledge_delay_speed':3
+        'ledge_delay_speed':3,
+        'ledge_platform_bonus':4000
         },
    '17':{
         'level_name':'Slide Rule', 
@@ -229,7 +246,8 @@ levelconfig={
         'ground_tiles_etched_color':C_COLOR_BLACK,
         'brick_color':C_COLOR_BLACK,
         'brick_border_color':C_COLOR_BLUE,
-        'ledge_delay_speed':3
+        'ledge_delay_speed':3,
+        'ledge_platform_bonus':5000
         },
    '19':{
         'level_name':'Tower Of Babel', 
@@ -251,7 +269,8 @@ levelconfig={
         'ground_tiles_etched_color':C_COLOR_BLACK,
         'brick_color':C_COLOR_WHITE,
         'brick_border_color':C_COLOR_BLUE,
-        'ledge_delay_speed':3
+        'ledge_delay_speed':3,
+        'ledge_platform_bonus':2000
         },
    '21':{
         'level_name':'Let Me Out', 
@@ -262,7 +281,8 @@ levelconfig={
         'ground_tiles_etched_color':C_COLOR_BLACK,
         'brick_color':C_COLOR_WHITE,
         'brick_border_color':C_COLOR_INDIGO,
-        'ledge_delay_speed':3
+        'ledge_delay_speed':3,
+        'ledge_platform_bonus':4000
         } ,
    '22':{
         'level_name':'Thumb Getting Tired?', 
@@ -295,7 +315,8 @@ levelconfig={
         'ground_tiles_etched_color':C_COLOR_BLACK,
         'brick_color':C_COLOR_VLBLUE,
         'brick_border_color':C_COLOR_WHITE,
-        'ledge_delay_speed':3
+        'ledge_delay_speed':3,
+        'ledge_platform_bonus':5000
         } ,
    '25':{
         'level_name':'Think Fast', 
@@ -306,72 +327,67 @@ levelconfig={
         'ground_tiles_etched_color':C_COLOR_BLACK,
         'brick_color':C_COLOR_AQUA,
         'brick_border_color':C_COLOR_INDIGO,
-        'ledge_delay_speed':3
+        'ledge_delay_speed':3,
+        'ledge_platform_bonus':2000
         } ,
    '26':{
-        'level_name':'lillys clean bedroom', 
+        'level_name':'Cavern of Death', 
         'speed':2,
-        'time':1000,
+        'time':2000,
         'enemy_color':C_COLOR_GREEN,
-        'ground_tiles_color':C_COLOR_BLUE,
+        'ground_tiles_color':C_COLOR_WHITE,
         'ground_tiles_etched_color':C_COLOR_BLACK,
-        'brick_color':C_COLOR_AQUA,
-        'brick_border_color':C_COLOR_INDIGO,
-        'ledge_delay_speed':3
+        'brick_color':C_COLOR_BLUE,
+        'brick_border_color':C_COLOR_WHITE,
+        'ledge_delay_speed':3,
+        'ledge_platform_bonus':5000
         } ,
    '27':{
-        'level_name':'lillys clean bedroom', 
+        'level_name':'You and I', 
         'speed':2,
-        'time':1000,
+        'time':2000,
         'enemy_color':C_COLOR_GREEN,
-        'ground_tiles_color':C_COLOR_BLUE,
+        'ground_tiles_color':C_COLOR_WHITE,
         'ground_tiles_etched_color':C_COLOR_BLACK,
-        'brick_color':C_COLOR_AQUA,
-        'brick_border_color':C_COLOR_INDIGO,
-        'ledge_delay_speed':3
+        'brick_color':C_COLOR_SUSHI,
+        'brick_border_color':C_COLOR_RIPTIDE,
+        'ledge_delay_speed':3,
+        'ledge_platform_bonus':2000
         } ,
    '28':{
-        'level_name':'lillys clean bedroom', 
+        'level_name':'Designer Dilemma', 
         'speed':2,
         'time':1000,
         'enemy_color':C_COLOR_GREEN,
         'ground_tiles_color':C_COLOR_BLUE,
         'ground_tiles_etched_color':C_COLOR_BLACK,
-        'brick_color':C_COLOR_AQUA,
+        'brick_color':C_COLOR_SADDLE_BROWN,
         'brick_border_color':C_COLOR_INDIGO,
-        'ledge_delay_speed':3
+        'ledge_delay_speed':3,
+        'ledge_platform_bonus':2000
         } ,
    '29':{
-        'level_name':'lillys clean bedroom', 
+        'level_name':'Short Pier', 
         'speed':2,
-        'time':1000,
+        'time':2000,
         'enemy_color':C_COLOR_GREEN,
         'ground_tiles_color':C_COLOR_BLUE,
         'ground_tiles_etched_color':C_COLOR_BLACK,
-        'brick_color':C_COLOR_AQUA,
-        'brick_border_color':C_COLOR_INDIGO,
-        'ledge_delay_speed':3
+        'brick_color':C_COLOR_WHITE,
+        'brick_border_color':C_COLOR_CRAB_APPLE,
+        'ledge_delay_speed':3,
+        'ledge_platform_bonus':3000
         } ,
    '30':{
-        'level_name':'lillys clean bedroom', 
+        'level_name':'High and Dry', 
         'speed':2,
-        'time':1000,
+        'time':2000,
         'enemy_color':C_COLOR_GREEN,
-        'ground_tiles_color':C_COLOR_BLUE,
+        'ground_tiles_color':C_COLOR_YELLOW,
         'ground_tiles_etched_color':C_COLOR_BLACK,
-        'brick_color':C_COLOR_AQUA,
-        'brick_border_color':C_COLOR_INDIGO,
-        'ledge_delay_speed':3
-        } ,
-   '31':{
-        'level_name':'lillys clean bedroom', 
-        'speed':2,
-        'time':1000,
-        'enemy_color':C_COLOR_GREEN,
-        'ground_tiles_color':C_COLOR_BLUE,
-        'ground_tiles_etched_color':C_COLOR_BLACK,
-        'brick_color':C_COLOR_AQUA,
-        'brick_border_color':C_COLOR_INDIGO,
-        'ledge_delay_speed':3
-        }   		
+        'brick_color':C_COLOR_DEEP_LILAC,
+        'brick_border_color':C_COLOR_TIA_MARIA,
+        'ledge_delay_speed':3,
+        'ledge_platform_bonus':3000
+        }  		
 }

@@ -1,8 +1,11 @@
 #!/Library/Frameworks/Python.framework/Versions/3.5/bin/python3
 # andrew bennett
 # june 2016
+# test
 #
-# version 1 - original
+# version 
+# 1.0 28 july 2016 1 original, contains first 30 levels of this game, is slighty different in display but fundamentally same
+
 
 import pygame
 import pygame.mixer
@@ -572,7 +575,12 @@ def drawobjects(p_object_array,p_level_config_dict,p_game_attributes,p_clear_cod
           
           # Display some text
           #text = font.render('LEVEL ' + str(p_level_config_dict['level']) + ', ' + str(p_level_config_dict['level_name'])+ ', ' + str(p_level_config_dict['speed']), True, C_COLOR_WHITE , (10,C_FRAME_DISPLAY_HEIGHT-(C_BLOCK_SIZE_HEIGHT*.5)))
-          text = C_FONT.render('LEVEL ' + str(p_level_config_dict['level']) + ', ' + str(p_level_config_dict['level_name']), True, C_COLOR_WHITE , (10,C_FRAME_DISPLAY_HEIGHT-(C_BLOCK_SIZE_HEIGHT*.5)))
+          l_platform_bonus_str=''
+          if (p_level_config_dict['has_ledges']):
+             l_platform_bonus_str = ' (' + str(p_level_config_dict['ledge_platform_bonus']) + ')'
+
+
+          text = C_FONT.render('LEVEL ' + str(p_level_config_dict['level']) + ', ' + str(p_level_config_dict['level_name'] + l_platform_bonus_str), True, C_COLOR_WHITE , (10,C_FRAME_DISPLAY_HEIGHT-(C_BLOCK_SIZE_HEIGHT*.5)))
           gameDisplay.blit(text, (10,C_FRAME_DISPLAY_HEIGHT-(C_BLOCK_SIZE_HEIGHT*.5)))
 
           l_tuple=(C_FRAME_DISPLAY_WIDTH-400,C_FRAME_DISPLAY_HEIGHT-(C_BLOCK_SIZE_HEIGHT*.5))
@@ -1223,6 +1231,7 @@ def load(p_game_attributes):
   level_config_dict.update({'level':p_game_attributes['level']})
   level_config_dict.update({'time_left':level_config_dict['time']})
   level_config_dict.update({'all_ledges_touched':False})
+  level_config_dict.update({'has_ledges':False})
   level_config_dict.update({'level_score':False})
   level_config_dict.update({'moves_done':0})
   #print (level_config_dict)
@@ -1279,6 +1288,7 @@ def load(p_game_attributes):
            l_dict.update({'has_been_touched':False})
            l_dict.update({'can_be_moved':False})
            l_height_mult=C_LEDGE_START_MULT/10
+           level_config_dict.update({'has_ledges':True})
         elif j==C_JACK: # or j.isdigit(): # bad guy is symbolised by a number
            #l_img=pygame.image.load(C_JACK_IMAGE)
            l_dict.update({'can_be_moved':True})
